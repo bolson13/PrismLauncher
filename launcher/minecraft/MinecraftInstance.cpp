@@ -572,6 +572,7 @@ QStringList MinecraftInstance::javaArguments()
     QStringList args;
 
     args << "-Duser.language=en";
+    args << "-Dnamefix=net.minecraft.client.main.Main";
 
     // custom args go first. we want to override them if we have our own here.
     args.append(extraArguments());

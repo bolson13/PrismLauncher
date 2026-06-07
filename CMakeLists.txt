@@ -350,10 +350,6 @@ add_subdirectory(program_info)
 set(Launcher_ENABLE_UPDATER NO)
 set(Launcher_BUILD_UPDATER NO)
 
-if (NOT APPLE AND (NOT Launcher_UPDATER_GITHUB_REPO STREQUAL "" AND NOT Launcher_BUILD_ARTIFACT STREQUAL ""))
-    set(Launcher_BUILD_UPDATER YES)
-endif()
-
 if(NOT (UNIX AND APPLE))
     # Install "portable.txt" if selected component is "portable"
     install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/${Launcher_Portable_File}" DESTINATION "." COMPONENT portable EXCLUDE_FROM_ALL)
